@@ -19,8 +19,8 @@ class Control:
         self.view.btn2.clicked.connect(self.view.clearMessage)
         
     def sum(self, a, b):
-            return a+b
-    
+        return a+b
+        
     def sub(self, a, b):
         return a-b
     
@@ -29,11 +29,14 @@ class Control:
     
     def div(self, a, b):
         return a/b
-        try:
-            if(b==0):
-                raise Exception("Divisor Error")
-            
     
-
     def pow(self, a, b):
-        return pow(a, b)
+        try:
+           if (a==0):
+                raise Exception("Base Error")
+            
+        except Exception as e:
+            return e
+        
+        return pow(a, b)   
+    
