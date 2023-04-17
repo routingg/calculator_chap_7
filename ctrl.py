@@ -29,6 +29,14 @@ class Control:
     
     def div(self, a, b):
         return a/b
+        try:
+            if(b==0):
+                raise Exception("Divisor Error")
+            
+        except Exception as e:
+            return e
+        
+        return a/b
     
     def pow(self, a, b):
         return pow(a, b)
